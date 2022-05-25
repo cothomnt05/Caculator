@@ -39,6 +39,18 @@ addEventListener('click', e =>{
             }
             break;
 
+        case '.':
+            if(result.innerHTML == ''){
+                result.innerHTML = '0.'
+            }
+            else if(result.innerHTML.includes('.')){
+                result.innerHTML += ''
+            }
+            else {
+                result.innerHTML += e.target.value;
+            }
+            break;        
+
         case 'result':
             result.innerHTML = ''
             break;
@@ -47,18 +59,7 @@ addEventListener('click', e =>{
             if (hasCalculated) {
                 hasCalculated = false
                 result.innerHTML = ''
-            }  
-            result.innerHTML += e.target.value;         
-
+            } 
+            result.innerHTML += e.target.value;        
     }
 })
-
-
-
-
-
-
-
-
-
-
